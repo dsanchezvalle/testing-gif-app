@@ -7,11 +7,12 @@ export const AddCategory = ({ setCategories }) => {
 
     const handleInputChange = ( e ) => {
         setInputValue( e.target.value );
+        //console.log('Handle change activated')
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        //console.log('Handle Submit called', inputValue)
         if ( inputValue.trim().length > 2 ) {
             setCategories( cats => [ inputValue, ...cats, ] );
             setInputValue('');
